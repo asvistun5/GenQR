@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+
+{% block title %}Сторінка налаштування підписки користувача{% endblock %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'settings.css' %}">
+{% endblock %}
+
+
+{% block body %}
+    <div class="container settings">
+        <h2>Налаштування підписки користувача</h2>
+        <div class="settings-div">
+            <div class="container sub">
+                <h1>Free</h1>
+                <hr color="C7CCDA">
+                <p>Безкоштовно зареєстрованому користувачеві можна створити один QR-код на 6-ть місяців.</p>
+                <div>
+                    <span class="blue">Вже придбана</span>
+                </div>
+            </div>
+            <div class="container sub">
+                <h1>Standart</h1>
+                <hr color="C7CCDA">
+                <p>Вартість підписки 2 $ на місяць. 10 кастомізованих QR-кодів.</p>
+                <div>
+                    <a href="{% url 'card' %}" class="blue">Придбати: 2$</a>
+                </div>
+            </div>
+            <div class="container sub">
+                <h1>Pro</h1>
+                <hr color="C7CCDA">
+                <p>До 100 QR-кодів, підписка 10 $ на місяць.</p>
+                <div>
+                    <a href="{% url 'card' %}" class="blue">Придбати: 10$</a>
+                </div>
+            </div>
+            <div class="container sub">
+                <h1>Desktop</h1>
+                <hr color="C7CCDA">
+                <p>до 10 QR-кодів на файли та додатки, підписка 10 $ на місяць.</p>
+                <div>
+                    <a href="{% url 'settings' %}" class="blue">Придбати: 10$</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

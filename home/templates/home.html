@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Головна сторінка{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock %}
+
+
+{% block body %}
+    {% load static %}
+    <div class="info">
+        <img src="{% static 'media/inform.svg' %}" alt="">
+        <p><span>My QR</span> — це зручний і швидкий сервіс для генерації QR-кодів, який спрощує обмін інформацією. З його допомогою ви зможете створити QR-коди для посилань, контактів, текстів, Wi-Fi та багато іншого всього за кілька секунд. </p>
+    </div>
+    <p>{{ request.user.username }}</p>
+    <div class="container sub">
+        <h1>Free</h1>
+        <hr color="C7CCDA">
+        <p>безкоштовно зареєстрованому користувачеві можна створити один QR-код на 6-ть місяців.</p>
+        <div>
+            <span class="blue">Вже придбана</span>
+        </div>
+    </div>
+    <div class="container sub">
+        <h1>Standart</h1>
+        <hr color="C7CCDA">
+        <p>вартість підписки 2 $ на місяць. 10 кастомізованих QR-кодів.</p>
+        <div>
+            <a href="{% url 'settings' %}" class="blue">Придбати: 2$</a>
+        </div>
+    </div>
+    <div class="container sub">
+        <h1>Pro</h1>
+        <hr color="C7CCDA">
+        <p>до 100 QR-кодів, підписка 10 $ на місяць.</p>
+        <div>
+            <a href="{% url 'settings' %}" class="blue">Придбати: 10$</a>
+        </div>
+    </div>
+    <div class="container sub">
+        <h1>Desktop</h1>
+        <hr color="C7CCDA">
+        <p>до 10 QR-кодів на файли та додатки, підписка 10 $ на місяць.</p>
+        <div>
+            <a href="{% url 'settings' %}" class="blue">Придбати: 10$</a>
+        </div>
+    </div>
+{% endblock %}

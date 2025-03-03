@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+
+{% block title %}Контакти{% endblock %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'contacts.css' %}">
+{% endblock %}
+
+
+{% block body %}
+    <div class="container sub">
+    <h1>Контакт #1</h1>
+        <hr color="C7CCDA">
+        <div class="inform">
+            <img src="{% static 'media/client.png' %}">
+            <div class="contact-info">
+                <h1>+380506723777</h1>
+                <div class="media">
+                    <img src="{% static 'media/viber.png' %}">
+                    <img src="{% static 'media/telegram.png' %}">
+                    <img src="{% static 'media/watsapp.jpg' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container sub">
+        <h1>Контакт #2</h1>
+        <hr color="C7CCDA">
+        <div class="inform">
+            <img src="{% static 'media/client.png' %}">
+            <div class="media img">
+                <h1>+380506722577</h1>
+                <img src="{% static 'media/viber.png' %}">
+                <img src="{% static 'media/telegram.png' %}">
+                <img src="{% static 'media/watsapp.jpg' %}">
+            </div>
+        </div>
+    </div>
+{% endblock %}

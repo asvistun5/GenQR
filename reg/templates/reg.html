@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+
+{% block title %}Реєстрація{% endblock %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'reg.css' %}">
+{% endblock %}
+
+
+{% block body %}
+    <form method="post">
+        <h1>Реєстрація</h1>
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Ведіть ім'я сюди..." required>
+        <input type="text" name="surname" placeholder="Ведіть прізвище сюди..." required>
+        <input type="text" name="email" placeholder="Ведіть email сюди..." required>
+        <input type="text" name="password" placeholder="Ведіть пароль сюди..." required>
+        <button>Зареєструватись</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+
+{% block title %}Авторизація{% endblock %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'auth.css' %}">
+{% endblock %}
+
+
+{% block body %}
+    <form method="post">
+        <h1>Авторизація</h1>
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Ведіть ім'я сюди..." required>
+        <input type="text" name="surname" placeholder="Ведіть прізвище сюди..." required>
+        <input type="text" name="password" placeholder="Ведіть пароль сюди..." required>
+        <button>Авторизуватись</button>
+    </form>
+{% endblock %}

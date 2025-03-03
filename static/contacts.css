@@ -1,0 +1,33 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sub div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex;
+    align-items: flex;
+    height: 167px;
+    width: 976px;
+}
+
+.inform img {
+    height: 170px;
+    width: 168px;
+}
+
+h1 {
+    font-size: 32px;
+    height: 54px;
+}
+
+.sub hr {
+    height: 3px; 
+    border-radius: 10px;
+}
+
+.media img {
+    height: 49px; 
+    width: 49px;
+    border-radius: 30%;
+}

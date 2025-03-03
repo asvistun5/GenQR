@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Мої QR-Коди{% endblock %}
+{% block head %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myqrs.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="container settings">
+        {% load static %}
+        <h1>Мої QR-Коди</h1>
+        <div class="settings-div">
+            <form class="qr-code" method="post">
+                {% csrf_token %}
+                {% for qr in qrs %}
+                    <h2>{{ qr.url }}</h2>
+                    <hr color="#C7CCDA">
+                    <div>
+                        <img src="{{ qr.img.url }}" alt="QR Code">
+                        <p>
+                            Сайт: {{ qr.url }}<br> <!--qr.site-->
+                            Розмір: 400x400<br>
+                            Колір QR Коду: {{ qr.color }}<br>
+                            Форма коду: {{ qr.shape }}<br>
+                            Зображення в середині: немає<br>
+                            <br>
+                            Створений: {{ qr.date }}
+                        </p>
+                        <div>
+                            <img src="{{ qr.image.url }}" alt="QR-код">
+                            <button type="submit" name="del-{{ qr.pk }}">Видалити</button>
+                            <a href="?download_local={{ qr.id }}" class="btn btn-primary">Завантажити</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </form>
+        </div>
+        <br>
+        <div class="gen-more-container">
+            <a href="{% url 'gen' %}" class="btn">Згенерувати ще один QR-код</a>
+        </div>
+    </div>
+{% endblock %}
