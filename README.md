@@ -1,4 +1,4 @@
-# qr_dj проект / qr_dj project
+# [qr_dj проект / qr_dj project](https://github.com/Levkivskiydmitro/qr_dj.git) 
 #### Проєкт, який створений для генерації ваших qr code! / A project that was created to generate your qr codes!
 #### Для вашої зручності буде доступний зручний інтерфейс для реєстрації, авторизації та покупки різноманітних підписок / For your convenience, a convenient interface will be available for registration, authorization and purchase of various subscriptions.
 
